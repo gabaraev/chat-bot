@@ -1,0 +1,245 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------------------------------------------------------------------------------------------------------ */
+body {
+    background: #7452F1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    display: flex;
+}
+
+.main {
+    width: 0px;
+}
+
+.left-column {
+    width: 265px; 
+    margin: 0 30px;
+}
+
+h1 {
+    font-size: 32pt;
+    color: #EEEAFC;
+}
+
+.left-column-buttons {
+    display: flex;
+}
+
+.ellipse {
+    position: absolute;
+    left: 300px;
+    background: #937AF2;
+    filter: blur(100px);
+    border-radius: 50%;
+    width: 900px;
+    height: 500px;
+    z-index: -1;
+}
+
+.chat-window-wrapper {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+    flex-shrink: 0;
+    padding-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 325px;
+    height: 590px;
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 530px;
+    width: 815px;
+    margin: 15px auto;
+    
+    z-index: 1;
+   
+}
+
+.messages-pusher {
+    height: 450px
+}
+
+.chat-window::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper {
+    margin: 10px auto;
+}
+
+.user-message-wrapper
+ {
+    margin-left: auto;
+    margin-right: 15px;
+    
+ }
+
+.bot-message-wrapper {
+    margin-right: auto;
+    margin-left: 15px;
+    
+}
+
+.message {
+    padding: 0 17px;
+    max-width: 450px;
+    z-index: 2;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14pt;
+}
+
+.message-from-user {
+    background-color: #7452F1;
+}
+
+.message-from-bot {
+    background-color: #EEEAFC;
+}
+
+.user-message-content {
+    color: #FFF;
+}
+
+.bot-message-content {
+    color: #7452F1;
+}
+
+.message-input-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.message-input {
+    width: 500px;
+    height: 50px;
+    font-size: 14pt;
+}
+
+.ad-list-wrapper {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 300px;
+    height: 500px;
+}
+
+.ad-list-header {
+    width: 272px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 23px;
+}
+
+.ad-list-header>span {
+    color: #6038F1;
+    font-size: 16pt;
+}
+
+
+.ad {
+    margin: 5px 0;
+    width: 272px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 17px;
+    text-align: center;
+}
+
+.ad>p {
+    padding-top:30px;
+    padding-left: 10px;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 272px;
+    height: 40px;
+    margin-left: 30px;
+    border: 1px solid #D3C9FB;
+    border-radius: 17px;
+    text-align: center;
+}
+
+.social-wrapper>a {
+
+    padding-top: 10px;
+}
+
+.logos {
+    width: 272px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.yfu-logo {
+    width: 120px;
+    height: 120px;
+}
+
+.reflex-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+
+}
+
