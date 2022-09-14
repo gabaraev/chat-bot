@@ -6,13 +6,15 @@ export default function ChatWindow ({messages}) {
 
     return (
         <div className='chat-window-wrapper'>
-            <div className="chat-window">
-                <div className='messages-pusher'></div>
-                {
-                    messages.map(message => <div className={'wrapper ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
-                }
+            <div className='chat-content'>
+                <div className="messages">
+                    {/* <div className='messages-pusher'></div> */}
+                    {
+                        messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
+                    }
+                </div>
+                <Input />
             </div>
-            <Input />
         </div>
     )
 }

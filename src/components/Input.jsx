@@ -5,7 +5,7 @@ export default function Input() {
 
     return (
         <div className="message-input-wrapper">
-            <input 
+            <textarea
                 className="message-input"
                 // onChange={() => {
                 //     setInput(target.value)
@@ -13,7 +13,7 @@ export default function Input() {
                 type='text' 
                 placeholder="Начните писать сообщение..."
             />
-            <button>Отправить</button>
+            <img src='icons/Sendstrelka.svg' />
         </div>
     )
 }

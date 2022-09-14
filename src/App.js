@@ -21,23 +21,24 @@ export default function App() {
   ]
   return (
     <div className='app'>
-      <div className='main'>
-          <div class="left-column">
-            <h1>Помошник абитуриента ЮФУ</h1>
-            <div className='left-column-buttons'>
-              <button>ночная тема</button>
-              <button>режим для слабовидящих</button>
-            </div>
+      <div class="left-column">
+        <div className='left-column-buttons'>
+          <div className='moon'>
+            <img src='icons/Component_2luna.svg'></img>
           </div>
-          <div class="ellipse"></div>
+          <div className='glasses'>
+            <img src='icons/Component_1ochki.svg'></img>
+          </div>
+          <img className='character' src='icons/Group_10pers.svg' alt="I'm supposed to be here :("></img>
+        </div>
       </div>
       <ChatWindow  messages={messages}/>
       <div className='right-column'>
         <AdList />
         <Socials />
         <div className='logos'>
-          <img className='yfu-logo' src='/yfu-logo.png'></img>
-          <img className='reflex-logo' src='/reflex-logo.jpg'></img>
+          <img className='yfu-logo' src='icons/logos/yfu-logo.png'></img>
+          <img className='reflex-logo' src='icons/logos/reflex-logo.jpg'></img>
         </div>
       </div>
     </div>

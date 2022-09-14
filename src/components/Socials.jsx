@@ -6,10 +6,10 @@ export default function Socials() {
 
     return (
         <div className="social-wrapper">
-            <a href=''>vk</a>
-            <a href=''>YouTube</a>
-            <a href=''>Telegram</a>
-            <a href=''>vk</a>
+            <a href=''><img src="icons/Vectorvk.svg" alt="" /></a>
+            <a href=''><img className='smol-youtube' src="icons/Vectoryutub.svg" alt="" /></a>
+            <a href=''><img src="icons/Vectortelegramm.svg" alt="" /></a>
+            <a href=''><img src="icons/Vectorvk.svg" alt="" /></a>
         </div>
     )
 }
