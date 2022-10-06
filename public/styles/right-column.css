@@ -1,0 +1,146 @@
+.right-column {
+    margin-top: 20px;
+    margin-right: 40px;
+    width: 272px;
+}
+
+.ad-list-header {
+    height: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 23px;
+}
+
+.ad-list-header>span {
+    color: #6038F1;
+    font-size: 16pt;
+    text-align: center;
+}
+
+
+.ad {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 17px;
+    text-align: center;
+}
+
+.ad p {
+    padding-top:30px;
+    padding-left: 10px;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    border: 1px solid #D3C9FB;
+    border-radius: 17px;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.social-wrapper a {
+    padding-top: 10px;
+}
+
+.smol-youtube {
+    height: 30px;
+    width: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.reflex-logo {
+    border-radius: 10px;
+
+}
+
+
+@media (min-width: 2400px) {
+    .yfu-logo {
+        margin-right: 50px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .reflex-logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin-right: 150px;
+    
+    }
+
+    .ad-list-wrapper {
+        margin-left: -200px;
+    }
+
+    .ad {
+        margin-top: 40px;
+        margin-left: 10px;
+        height: 150px;
+        width: 450px;
+    }
+
+    .ad-list-header {
+        width: 450px;
+        margin-left: 16px;
+    }
+    
+    .social-wrapper {
+        margin-left: -195px;
+    }
+
+    .logos {
+        margin-top: 60px;
+        margin-left: -50px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 2000px) {
+    .yfu-logo {
+        margin-right: 50px;
+        /* width: 120px; */
+        height: 120px;
+    }
+    
+    .reflex-logo {
+        /* width: 120px; */
+        height: 120px;
+        border-radius: 10px;
+        margin-right: 150px;
+    
+    }
+
+    .ad-list-wrapper {
+        margin-left: -150px;
+    }
+
+    .ad {
+        margin-left: 10px;
+        height: 150px;
+        width: 350px;
+    }
+
+    .ad-list-header {
+        width: 350px;
+        margin-left: 8px;
+    }
+    
+    .social-wrapper {
+        margin-left: -150px;
+        margin-right: 55px;
+    }
+
+    .logos {
+        margin-top: 50px;
+        margin-left: -50px;
+    }
+}

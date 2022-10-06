@@ -1,0 +1,150 @@
+.chat-window-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+}
+
+
+/* .chat-window-wrapper::-webkit-scrollbar {
+    display: none;
+} */
+
+.messages {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 1;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+
+.message-box {
+    margin: 10px auto;
+}
+
+.user-message-wrapper
+ {
+    margin-right: 20px;
+    
+ }
+
+.bot-message-wrapper {
+    margin-left: 20px;
+    
+}
+
+.message {
+    padding: 0 10px;
+    z-index: 2;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14pt;
+}
+
+.message-from-user {
+    background-color: #7452F1;
+}
+
+.message-from-bot {
+    background-color: #EEEAFC;
+}
+
+.user-message-content {
+    color: #FFF;
+    padding: 5px 0;
+    word-break: break-word;
+}
+
+.bot-message-content {
+    color: #7452F1;
+    padding: 5px 0;
+    word-break: break-word;
+}
+
+.message-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    background-color: #fff;
+}
+
+.message-input {
+    word-break: break-word;
+    display: block;
+    margin-top: 5px;
+    font-size: 14pt;
+    margin-left: 10px;
+    border: 0;
+    bottom: -100px;
+    outline: none;
+    resize: none
+    
+}
+
+.message-input::-webkit-scrollbar {
+    display: none;
+}
+
+.message-button {
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+@media (min-width: 2400px) {
+    .messages {
+        width: 1200px;
+        height: 1015px;
+    }
+    .message-input {
+        width: 800px;
+        height: 80px;
+    }
+    .message {
+        max-width: 700px;
+    }
+    .message-input-wrapper {
+        height: 100px;
+        width: 900px;
+    }
+    .message-input-wrapper img {
+        height: 60px;
+        width: 60px;
+    }
+    .message-input-wrapper {
+        margin-left: 150px;
+    }
+}
+@media (min-width: 1600px) and (max-width: 2000px) {
+    .messages {
+        height: 800px;
+    }
+    .message-input {
+        width: 600px;
+        height: 80px;
+    }
+    .message {
+        max-width: 500px;
+    }
+    .message-input-wrapper {
+        height: 100px;
+        /* width: 800px; */
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .message-input-wrapper img {
+        height: 60px;
+        width: 60px;
+    }
+}
