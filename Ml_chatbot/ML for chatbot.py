@@ -42,7 +42,7 @@ class NeighborSampler(BaseEstimator):
 
 
 database = pd.read_csv(
-    "G:/Study/chat-bot/server/ml/Ml_chatbot/database.csv", sep=";", on_bad_lines="skip"
+    "G:/Study/chat-bot/server/Ml_chatbot/database.csv", sep=";", on_bad_lines="skip"
 )  # в первом аргументе необходимо указать путь до файла с данными
 
 

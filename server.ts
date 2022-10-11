@@ -45,7 +45,7 @@ app.post('/', (req, res) => {
     args: [req.body.content]
 };
 
-  PythonShell.run('ml/ML_chatbot/ML for chatbot.py', options, (err, output) => {
+  PythonShell.run('Ml_chatbot/ML for chatbot.py', options, (err, output) => {
     if (err)
       console.error(err);
 
