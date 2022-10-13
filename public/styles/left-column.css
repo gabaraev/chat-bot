@@ -1,14 +1,16 @@
 h1 {
-    position: absolute;
+    max-width: 300px;
+    margin-top: 20px;
+    font-size: 24pt;
+    color: #EEEAFC;
 }
 
 .left-column {
     position: relative;
-    margin-left: 40px;
+    margin-right: 8vh;
 }
 
 .left-column-buttons {
-    margin-top: 120px;
     display: flex;
 }
 
@@ -33,10 +35,11 @@ h1 {
     position: absolute;
     margin-top: 70px;
     left: -8px;
+    height: 70vh;
 }
 
 
-@media (min-width: 2400px) {
+/* @media (min-width: 2400px) {
     .character {
         height: 1005px;
     }
@@ -46,4 +49,4 @@ h1 {
     .character {
         height: 800px;
     }
-}
+} */

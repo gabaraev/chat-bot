@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import mMessage from "../models/mMessage"
 import axios from 'axios'
 
@@ -6,9 +6,10 @@ import axios from 'axios'
 interface InputProps {
     messages: mMessage[]
     setMessages: Function
+    setCharacter: React.Dispatch<React.SetStateAction<string>>
 };
 
-export default function Input({ messages, setMessages }: InputProps) {
+export default function Input({ messages, setMessages, setCharacter }: InputProps) {
 
     const [value, setValue] = useState('');
 
@@ -32,7 +33,7 @@ export default function Input({ messages, setMessages }: InputProps) {
                     user: 'bot',
                     content: res.data.content
                 }
-                console.log(res.data.content);
+                setCharacter(`icons/characters/${res.data.type}.svg`)
                 
                 await setMessages([...previousMessagesForBotResponse, botMessage])
             })

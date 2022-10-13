@@ -53,15 +53,9 @@ body {
 }
 
 .app {
+    height: 90vh;
     display: flex;
-    justify-content: space-between;
-}
-
-h1 {
-    margin-top: 20px;
-    margin-left: 40px;
-    font-size: 24pt;
-    color: #EEEAFC;
+    justify-content: center;
 }
 
 .ellipse {

@@ -5,10 +5,11 @@ import mMessage from '../models/mMessage';
 import axios from 'axios';
 
 
-// put this in Backend ----------------------------------------------------
-// let messagesFromBackend: mMessage[];
-// -----------------------------------------------------------------------
-export default function ChatWindow () {
+interface chatWindowProps {
+    setCharacter: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function ChatWindow ({ setCharacter }: chatWindowProps) {
 
     const [messages, setMessages] = useState([] as mMessage[])
 
@@ -36,7 +37,7 @@ export default function ChatWindow () {
                 </div>
                 <div id='scroll-to'></div>
             </div>
-            <Input setMessages={setMessages} messages={messages} />
+            <Input setMessages={setMessages} messages={messages} setCharacter={setCharacter}/>
         </div>
     )
 }
