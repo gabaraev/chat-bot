@@ -47,15 +47,17 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
     }
 
     return (
-        <div className="message-input-wrapper">
-            <textarea
-                className="message-input"
-                onChange={handleChange} 
-                placeholder="Начните писать сообщение..."
-                value={value}
-                onKeyDown={sendOnEnter}
-            />
-            <button className="message-button" onClick={sendMessage}><img src='icons/Sendstrelka.svg' alt="отправить сообщение"/></button>
+        <div className='input-outline'>
+            <div className="message-input-wrapper">
+                <textarea
+                    className="message-input"
+                    onChange={handleChange} 
+                    placeholder="Начните писать сообщение..."
+                    value={value}
+                    onKeyDown={sendOnEnter}
+                />
+                <button className="message-button" onClick={sendMessage}><img src='icons/Sendstrelka.svg' alt="отправить сообщение"/></button>
+            </div>
         </div>
     )
 }

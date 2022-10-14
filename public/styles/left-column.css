@@ -7,7 +7,8 @@ h1 {
 
 .left-column {
     position: relative;
-    margin-right: 8vh;
+    margin-left: -11vh;
+    margin-right: 11vh;
 }
 
 .left-column-buttons {

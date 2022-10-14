@@ -15,7 +15,7 @@ export default function LeftColumn({ character }: LeftColumnProps) {
           <div className='glasses'>
             <img src='icons/Component_1ochki.svg' alt='режим для слабовидящих'></img>
           </div>
-          <img className='character' src={character} alt="I'm supposed to be here :("></img>
+		<img className='character' src={character} alt="I'm supposed to be here :("></img>
         </div>
     </div>
 	)

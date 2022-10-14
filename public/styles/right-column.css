@@ -68,6 +68,11 @@
     height: 120px;
 }
 
+.zen-logo {
+    width: 30px;
+    height: 30px;
+}
+
 
 /* @media (min-width: 2400px) {
     .yfu-logo {

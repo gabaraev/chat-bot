@@ -23,19 +23,19 @@ export default function ChatWindow ({ setCharacter }: chatWindowProps) {
     const endMessages = useRef(null);
 
     useEffect(() => {
-        if (endMessages.current)
-            endMessages.current.scrollTop = endMessages.current.scrollHeight
+        endMessages.current?.scrollIntoView()
     }, [messages])
 
     return (
         <div className='chat-window-wrapper'>
+            <div className='top-overflow'/>
             <div className='chat-content'>
-                <div className="messages" ref={endMessages} >
+                <div className="messages">
                     {
                         messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
                     }
                 </div>
-                <div id='scroll-to'></div>
+                <div ref={endMessages} ></div>
             </div>
             <Input setMessages={setMessages} messages={messages} setCharacter={setCharacter}/>
         </div>
