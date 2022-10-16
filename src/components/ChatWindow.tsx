@@ -6,10 +6,11 @@ import axios from 'axios';
 
 
 interface chatWindowProps {
-    setCharacter: React.Dispatch<React.SetStateAction<string>>
+    setCharacter: React.Dispatch<React.SetStateAction<string>>,
+    theme: string
 }
 
-export default function ChatWindow ({ setCharacter }: chatWindowProps) {
+export default function ChatWindow ({ setCharacter, theme }: chatWindowProps) {
 
     const [messages, setMessages] = useState([] as mMessage[])
 
@@ -27,7 +28,7 @@ export default function ChatWindow ({ setCharacter }: chatWindowProps) {
     }, [messages])
 
     return (
-        <div className='chat-window-wrapper'>
+        <div className='chat-window-wrapper' data-theme={theme} >
             <div className='top-overflow'/>
             <div className='chat-content'>
                 <div className="messages">

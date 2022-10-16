@@ -1,7 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "left-column.css";
+@import "chat.css";
+@import "right-column.css";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,18 +46,24 @@ table {
 	border-spacing: 0;
 }
 /* ------------------------------------------------------------------------------------------------------ */
-body {
-    background: #7452F1;
-    font-family: 'Montserrat', sans-serif;
+:root {
+	--body-color: #7452F1;
+}
+
+.app[data-theme='dark'] {
+	--body-color: #291E53;
 }
 
 .app {
-    height: 90vh;
+	background: var(--body-color, #7452F1);
+	font-family: 'Montserrat', sans-serif;
+    height: 100vh;
     display: flex;
+	align-items: stretch;
     justify-content: center;
+	
 }
-
-.ellipse {
+/* .ellipse {
     position: absolute;
     background: #937AF2;
     top: 25%;
@@ -68,7 +73,7 @@ body {
     width: 800px;
     height: 700px;
     z-index: -1;
-}
+} */
 
 
 

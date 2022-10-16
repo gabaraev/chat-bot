@@ -14,7 +14,12 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
     const [value, setValue] = useState('');
 
     const handleChange = ({ target }: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setValue(target.value)
+        if (!target.value.startsWith('\n'))
+            setValue(target.value)
+
+        
+        
+        
     }
 
     const sendMessage = async () => {
@@ -42,7 +47,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
     }
 
     const sendOnEnter = ({ key }: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (key === 'Enter' && value !== '')
+        if (key === 'Enter')
             sendMessage()
     }
 
@@ -51,10 +56,10 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             <div className="message-input-wrapper">
                 <textarea
                     className="message-input"
+                    onKeyDown={sendOnEnter}
                     onChange={handleChange} 
                     placeholder="Начните писать сообщение..."
                     value={value}
-                    onKeyDown={sendOnEnter}
                 />
                 <button className="message-button" onClick={sendMessage}><img src='icons/Sendstrelka.svg' alt="отправить сообщение"/></button>
             </div>
