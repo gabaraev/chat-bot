@@ -8,6 +8,7 @@
     --input-text-color: black;
     --message-button-color: #EEEAFC;
     --end-line: #7452F1;
+    --input-wrapper-border-color: rgba(0, 0, 0, 0);
 }
 
 .chat-window-wrapper[data-theme='dark'] {
@@ -20,7 +21,7 @@
     --input-text-color: #EEEAFC;
     --message-button-color: rgba(255, 255, 255, 0);
     --end-line: #291E53;
-    --input-wrapper-border: 3px solid #8766FF;
+    --input-wrapper-border-color: #8766FF;
 }
 
 
@@ -115,7 +116,7 @@
     border-radius: 18px;
     background-color: var(--message-input-wrapper-color, #EEEAFC);
     margin-left: 50px;
-    border: var(--input-wrapper-border, none)
+    border: 3px solid var(--input-wrapper-border-color, rgba(0, 0, 0, 0));
 }
 
 .message-input {

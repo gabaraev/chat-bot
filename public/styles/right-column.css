@@ -1,10 +1,12 @@
 :root {
     --ad-header-color: rgba(255, 255, 255, 0.45);
+    --ad-header-border: 3px solid rgba(0, 0, 0, 0);
     --ad-header-text-color: #6038F1;
     --ad-color: rgba(255, 255, 255, 0.45);
     --ad-text-color: black;
     --social-border-color: #D3C9FB;
-    --social-border: 1px;
+    --social-border: 2px;
+    --ad-border-color: rgb(238, 234, 252);
 }
 
 .right-column[data-theme='dark'] {
@@ -14,7 +16,6 @@
     --ad-color: rgba(255, 255, 255, 0.10);
     --ad-text-color: #EEEAFC;
     --social-border-color: rgba(135, 102, 255, 0.3);
-    --social-border: 3px;
     --ad-border-color: #8766FF;
 }
 
@@ -22,6 +23,13 @@
     margin-top: 20px;
     margin-left: 3vh;
     width: 272px;
+}
+
+.ad-list-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ad-list-header {
@@ -42,12 +50,13 @@
     margin-top: 15px;
     margin-bottom: 15px;
     background: var(--ad-color, rgba(255, 255, 255, 0.45));
+    border: 3px solid rgba(0, 0, 0, 0);
     border-radius: 17px;
     text-align: center;
 }
 
-.right-column[data-theme='dark']>div>div[class='ad']:hover {
-    border: 3px solid var(--ad-border-color, #D3C9FB);
+.ad:hover {
+    border-color: var(--ad-border-color, rgba(0, 0, 0, 0));
 }
 
 .ad p {
@@ -61,7 +70,6 @@
     height: 50px;
     border: var(--social-border, 1px) solid var(--social-border-color, #D3C9FB);
     border-radius: 17px;
-    text-align: center;
     margin-top: 36px;
 }
 
@@ -70,8 +78,7 @@
 }
 
 .smol-youtube {
-    height: 30px;
-    width: 30px;
+    margin-top: -7px;
 }
 
 .logos {

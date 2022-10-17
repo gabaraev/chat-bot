@@ -1,0 +1,16 @@
+<svg width="67" height="34" viewBox="0 0 67 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="67" height="34" rx="10" fill="#544B75"/>
+<ellipse cx="47.5" cy="17" rx="1" ry="1.5" transform="rotate(90 47.5 17)" fill="#8766FF"/>
+<ellipse cx="20.5" cy="17" rx="1" ry="1.5" transform="rotate(90 20.5 17)" fill="#8766FF"/>
+<circle cx="34" cy="17" r="8.5" stroke="#8766FF" stroke-width="3"/>
+<ellipse cx="34" cy="3.5" rx="1" ry="1.5" fill="#8766FF"/>
+<ellipse cx="34" cy="30.5" rx="1" ry="1.5" fill="#8766FF"/>
+<path d="M42 17C47 17 48.5 17 48.5 17" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M20 17C25 17 25.5 17 25.5 17" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M34 8.5C34 3.5 34 3 34 3" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M34 31.5C34 26.5 34 26 34 26" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M41 9.8891C44.5355 6.35357 44.8891 6.00001 44.8891 6.00001" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M24 27.8891C27.5355 24.3536 27.8891 24 27.8891 24" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M41 24C44.5355 27.5355 44.8891 27.8891 44.8891 27.8891" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+<path d="M23 6C26.5355 9.53553 26.8891 9.88909 26.8891 9.88909" stroke="#8766FF" stroke-width="2" stroke-linecap="round"/>
+</svg>
