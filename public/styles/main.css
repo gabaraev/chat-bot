@@ -59,7 +59,7 @@ table {
 	font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
-	align-items: stretch;
+	/* align-items: stretch; */
     justify-content: center;
 	
 }

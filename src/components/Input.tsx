@@ -1,6 +1,7 @@
 import { useState } from "react"
 import mMessage from "../models/mMessage"
 import axios from 'axios'
+import Cookies from 'js-cookie'
 
 
 interface InputProps {
@@ -32,13 +33,13 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post('http://localhost:8000', newMessage)
+            axios.post(`http://localhost:8000?id=${Cookies.get('id')}`, newMessage)
             .then(async res => {
                 const botMessage: mMessage = {
                     user: 'bot',
                     content: res.data.content
                 }
-                setCharacter(`icons/characters/${res.data.type}.svg`)
+                setCharacter(`icons/characters/${res.data.type}`)
                 
                 await setMessages([...previousMessagesForBotResponse, botMessage])
             })

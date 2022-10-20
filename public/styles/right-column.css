@@ -20,9 +20,11 @@
 }
 
 .right-column {
+    margin-right: 2vw;
     margin-top: 20px;
-    margin-left: 3vh;
-    width: 272px;
+    margin-left: 2vw;
+    max-width: 272px;
+    min-width: 250px;
 }
 
 .ad-list-wrapper {

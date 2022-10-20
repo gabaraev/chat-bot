@@ -18,13 +18,13 @@
 
 .left-column {
     position: relative;
-    margin-left: -11vh;
-    margin-right: 11vh;
+    /* margin-left: -5vw; */
+    margin-right: 4vw;
 }
 
 .heading {
     font-size: 30pt;
-    max-width: 300px;
+    max-width: 200px;
     margin-top: 20px;
     font-size: 24pt;
     color: var(--heading-color, #EEEAFC);
@@ -55,8 +55,8 @@
 }
 
 .character {
-    position: absolute;
-    margin-top: 70px;
-    left: -8px;
-    height: 70vh;
+    /* position: absolute; */
+    margin-top: 20px;
+    margin-left: -8px;
+    height: 60vh;
 }

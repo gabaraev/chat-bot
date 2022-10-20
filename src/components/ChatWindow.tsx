@@ -3,6 +3,7 @@ import Message from './Message'
 import Input from './Input';
 import mMessage from '../models/mMessage';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 
 interface chatWindowProps {
@@ -16,7 +17,7 @@ export default function ChatWindow ({ setCharacter, theme }: chatWindowProps) {
 
     useEffect(() => {
         axios
-        .get('http://localhost:8000')
+        .get(`http://localhost:8000/?id=${Cookies.get('id')}`)
         .then(res => setMessages(res.data))
         .catch(err => console.error(err));
     }, [])

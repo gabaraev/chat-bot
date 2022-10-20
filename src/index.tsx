@@ -7,8 +7,7 @@ const root = ReactDOM.createRoot(
     document.getElementById('root')! as HTMLElement
     );
 root.render(
-    <React.StrictMode>
-        <link rel="stylesheet" href="../public/styles/left-column.css" />
+    // <React.StrictMode>
         <App />
-    </React.StrictMode>
+    // </React.StrictMode>
 );

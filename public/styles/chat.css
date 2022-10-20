@@ -26,7 +26,7 @@
 
 
 .chat-window-wrapper {
-    width: 700px; 
+    width: 35vw; 
     max-height: 90vh;
     margin-top: 20px;
     padding-top: 10px;
@@ -76,8 +76,8 @@
 }
 
 .message {
-    padding: 0 10px;
-    max-width: 450px;
+    padding: 5px 10px;
+    max-width: 25vw;
     z-index: 2;
     border-radius: 10px;
     text-align: left;
@@ -105,17 +105,17 @@
 }
 
 .input-outline {
-    padding-top: 20px;
+    padding-top: 1vh;
     border-top: solid 1px var(--end-line, #7452F1);
 }
 
 .message-input-wrapper {
     display: flex;
-    max-width: 600px;
-    margin-bottom: 25px;
+    max-width: 30vw;
+    margin-bottom: 1vh;
     border-radius: 18px;
     background-color: var(--message-input-wrapper-color, #EEEAFC);
-    margin-left: 50px;
+    margin-left: 2vw;
     border: 3px solid var(--input-wrapper-border-color, rgba(0, 0, 0, 0));
 }
 
@@ -123,10 +123,9 @@
     background-color: var(--message-input-wrapper-color, #EEEAFC);
     word-break: break-word;
     display: block;
-    width: 500px;
+    width: 30vw;
     margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 1vw;
     font-size: 14pt;
     border: 0;
     outline: none;
@@ -135,6 +134,7 @@
 }
 
 textarea {
+    font: inherit;
     color: var(--input-text-color, black);
 }
 
