@@ -5,6 +5,7 @@
 
 
 import sys
+import os
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
@@ -40,9 +41,9 @@ class NeighborSampler(BaseEstimator):
             )
         return self.y[result]
 
-
+base_dir = os.getcwd()
 database = pd.read_csv(
-    "G:/Study/chat-bot/server/Ml_chatbot/database.csv", sep=";", on_bad_lines="skip"
+    os.path.join(base_dir, "Ml_chatbot/database.csv"), sep=";", on_bad_lines="skip"
 )  # в первом аргументе необходимо указать путь до файла с данными
 
 

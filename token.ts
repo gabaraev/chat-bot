@@ -1,0 +1,2 @@
+const token = '9c3ce37a9c3ce37a9c3ce37a929f2dca2b99c3c9c3ce37aff6811541c8a4debfafab744'
+export default token
