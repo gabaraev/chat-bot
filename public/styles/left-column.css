@@ -18,8 +18,8 @@
 
 .left-column {
     position: relative;
-    /* margin-left: -5vw; */
-    margin-right: 4vw;
+    /* margin-left: 1vw; */
+    margin-right: 1vw;
 }
 
 .heading {
@@ -58,5 +58,5 @@
     /* position: absolute; */
     margin-top: 20px;
     margin-left: -8px;
-    height: 60vh;
+    height: 70vh;
 }

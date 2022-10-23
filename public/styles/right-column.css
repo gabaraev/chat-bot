@@ -20,11 +20,10 @@
 }
 
 .right-column {
-    margin-right: 2vw;
+    /* margin-right: 2vw; */
     margin-top: 20px;
-    margin-left: 2vw;
-    max-width: 272px;
-    min-width: 250px;
+    margin-left: 1vw;
+    width: 13vw;
 }
 
 .ad-list-wrapper {

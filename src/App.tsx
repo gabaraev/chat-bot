@@ -9,8 +9,6 @@ export default function App() {
   // setting Cookies of theme and id for db
   if (Cookies.get('theme') === undefined)
     Cookies.set('theme', 'light')
-  if (Cookies.get('id') === undefined)
-    Cookies.set('id', Date.now().toString())
 
   const [theme, setTheme] = useState(Cookies.get('theme'))
   const [character, setCharacter] = useState('icons/characters/general')

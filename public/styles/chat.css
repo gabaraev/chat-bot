@@ -26,7 +26,7 @@
 
 
 .chat-window-wrapper {
-    width: 35vw; 
+    width: 32vw; 
     max-height: 90vh;
     margin-top: 20px;
     padding-top: 10px;
@@ -111,11 +111,12 @@
 
 .message-input-wrapper {
     display: flex;
-    max-width: 30vw;
+    max-width: 28vw;
     margin-bottom: 1vh;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 18px;
     background-color: var(--message-input-wrapper-color, #EEEAFC);
-    margin-left: 2vw;
     border: 3px solid var(--input-wrapper-border-color, rgba(0, 0, 0, 0));
 }
 
@@ -123,7 +124,7 @@
     background-color: var(--message-input-wrapper-color, #EEEAFC);
     word-break: break-word;
     display: block;
-    width: 30vw;
+    width: 100%;
     margin-top: 5px;
     margin-left: 1vw;
     font-size: 14pt;

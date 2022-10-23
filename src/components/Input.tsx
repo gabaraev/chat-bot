@@ -2,6 +2,13 @@ import { useState } from "react"
 import mMessage from "../models/mMessage"
 import axios from 'axios'
 import Cookies from 'js-cookie'
+import {initializeApp} from 'firebase/app'
+import { getFirestore, doc, updateDoc, arrayUnion } from 'firebase/firestore'
+import { config } from '../config'
+
+
+const firebaseApp = initializeApp(config.firebase)
+const db = getFirestore(firebaseApp)
 
 
 interface InputProps {
@@ -24,7 +31,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
     }
 
     const sendMessage = async () => {
-        if (value !== '' && value !== '\n') {
+        if (value.trim()) {
                 const newMessage: mMessage = {
                 user: 'user',
                 content: value,
@@ -33,7 +40,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post(`http://localhost:8000?id=${Cookies.get('id')}`, newMessage)
+            axios.post(`http://localhost:8000`, newMessage)
             .then(async res => {
                 const botMessage: mMessage = {
                     user: 'bot',
@@ -41,7 +48,11 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
                 }
                 setCharacter(`icons/characters/${res.data.type}`)
                 
-                await setMessages([...previousMessagesForBotResponse, botMessage])
+                setMessages([...previousMessagesForBotResponse, botMessage])
+                const docRef = doc(db, 'chats', `${Cookies.get('id')}`)
+                await updateDoc(docRef, {
+                messages: arrayUnion(botMessage)
+            })
             })
             .catch(err => console.error(err));
         }
