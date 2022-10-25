@@ -1,9 +1,8 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-import { API, APIRequest } from 'vk-io'
+import { API } from 'vk-io'
 import token from './token'
-
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 
@@ -16,7 +15,7 @@ app.use(function (req, res, next) {
   req.params
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'https://reflex-companion.web.app/');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -46,15 +45,12 @@ app.use(function (req, res, next) {
 // 	  "content": "Привет, чем я могу тебе помочь?"
 // 	}
 //   ]
- 
-app.get('/', async (req, res) => {
+
+app.get('/vk-main-post', async (req, res) => {
 	// получаем объявление из вк
-  if (req.query.id === 'news') {
-    const postVK = await APIvk.wall.get({owner_id: -47535294, count: 1})
-    console.log(postVK)
+    const post = await APIvk.wall.get({owner_id: -47535294, count: 1})
+    res.status(200).send(post)
     return
-  }
-  
 
   // pool.query(`SELECT messages from chats WHERE id = ${req.query.id}`, (err, queryRes) => {
 	// if (err)
@@ -75,6 +71,12 @@ app.get('/', async (req, res) => {
 	// res.status(200).send(messages)
   // })
 	
+})
+
+app.get('/vk-sic-post', async (req, res) => {
+	const post = await APIvk.wall.get({owner_id: -76527561, count: 1})
+    res.status(200).send(post)
+    return
 })
 
 app.post('/', (req, res) => {
