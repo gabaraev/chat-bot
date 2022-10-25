@@ -19,6 +19,7 @@
     "firebase-admin": "^11.2.0",
     "firebase-tools": "^11.15.0",
     "pg": "^8.8.0",
+    "uuid": "^9.0.0",
     "vk-io": "^4.7.0"
   },
   "devDependencies": {
