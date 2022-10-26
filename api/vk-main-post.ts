@@ -5,7 +5,7 @@ import token from '../token'
 
 const APIvk = new API({ token: token})
 
-export const vkMainPost = Router()
+const vkMainPost = Router()
 
 vkMainPost.get('/vk-main-post', async (req, res) => {
 	// получаем объявление из вк
@@ -13,3 +13,5 @@ vkMainPost.get('/vk-main-post', async (req, res) => {
     res.status(200).send(post)
     return
 })
+
+export default vkMainPost

@@ -4,7 +4,7 @@ import token from '../token'
 
 
 const APIvk = new API({ token: token})
-export const vkSicPost = Router()
+const vkSicPost = Router()
 
 
 vkSicPost.get('/vk-sic-post', async (req, res) => {
@@ -12,3 +12,5 @@ vkSicPost.get('/vk-sic-post', async (req, res) => {
     res.status(200).send(post)
     return
 })
+
+export default vkSicPost
