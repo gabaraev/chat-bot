@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.ts",
     "start": "node server.ts",
-    "deploy": "vercel deploy --prod",
-    "build": "vercel build --prod"
+    "deploy": "vercel deploy --prod"
   },
   "keywords": [],
   "author": "",
