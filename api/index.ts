@@ -1,14 +1,18 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-import { API } from 'vk-io'
-import token from '../token'
+import { vkMainPost } from './vk-main-post'
+import { vkSicPost } from "./vk-sic-post"
+// import { API } from 'vk-io'
+// import token from '../token'
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 
 const app = express()
-const APIvk = new API({ token: token})
 
+// const APIvk = new API({ token: token})
+app.use(vkMainPost)
+app.use(vkSicPost)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(function (req, res, next) {
@@ -46,11 +50,11 @@ app.use(function (req, res, next) {
 // 	}
 //   ]
 
-app.get('/vk-main-post', async (req, res) => {
-	// получаем объявление из вк
-    const post = await APIvk.wall.get({owner_id: -47535294, count: 1})
-    res.status(200).send(post)
-    return
+// app.get('/vk-main-post', async (req, res) => {
+// 	// получаем объявление из вк
+//     const post = await APIvk.wall.get({owner_id: -47535294, count: 1})
+//     res.status(200).send(post)
+//     return
 
   // pool.query(`SELECT messages from chats WHERE id = ${req.query.id}`, (err, queryRes) => {
 	// if (err)
@@ -71,13 +75,13 @@ app.get('/vk-main-post', async (req, res) => {
 	// res.status(200).send(messages)
   // })
 	
-})
+// })
 
-app.get('/vk-sic-post', async (req, res) => {
-	const post = await APIvk.wall.get({owner_id: -76527561, count: 1})
-    res.status(200).send(post)
-    return
-})
+// app.get('/vk-sic-post', async (req, res) => {
+// 	const post = await APIvk.wall.get({owner_id: -76527561, count: 1})
+//     res.status(200).send(post)
+//     return
+// })
 
 app.post('/', (req, res) => {
   //inserting incoming user message
