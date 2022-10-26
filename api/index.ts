@@ -2,7 +2,7 @@ import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
 import { API } from 'vk-io'
-import token from './token'
+import token from '../token'
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 
