@@ -11,8 +11,8 @@ import vkSicPost from "./vk-sic-post"
 const app = express()
 
 // const APIvk = new API({ token: token})
-app.use('/posts', vkMainPost)
-app.use('/posts', vkSicPost)
+app.use('/', vkMainPost)
+app.use('/', vkSicPost)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(function (req, res, next) {
