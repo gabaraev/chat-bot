@@ -1,18 +1,18 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-import Main from './vk-main-post.js'
-import Sic from "./vk-sic-post.js"
+import Main from './routes/vk-main-post.js'
+import Sic from "./routes/vk-sic-post.js"
 import { API } from 'vk-io'
-import token from '../token.js'
+import token from './token.js'
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 
 const app = express()
 
 const APIvk = new API({ token: token})
-app.use('/', Main)
-app.use('/', Sic)
+app.use('/vk-main-post', Main)
+app.use('/vk-sic-post', Sic)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(function (req, res, next) {
