@@ -38,21 +38,18 @@ export default function ChatWindow ({ setCharacter, theme }: chatWindowProps) {
         setMessages(initialMessage)
     }
 
-    useEffect(() => {
-        // axios
-        // .get(`http://localhost:8000/?id=${Cookies.get('id')}`)
-        // .then(res => setMessages(res.data))
-        // .catch(err => console.error(err));
-        const fetchMessages = async () => {
-            const userID = Cookies.get('id')
-            const docRef = doc(db, 'chats', `${userID}`)
-            const docSnap = await getDoc(docRef)
-            if (typeof docSnap.data() !== 'undefined') {
-                setMessages(docSnap.data().messages)
-                return
-            }
-            handleNewUser()
+    const fetchMessages = async () => {
+        const userID = Cookies.get('id')
+        const docRef = doc(db, 'chats', `${userID}`)
+        const docSnap = await getDoc(docRef)
+        if (typeof docSnap.data() !== 'undefined') {
+            setMessages(docSnap.data().messages)
+            return
         }
+        handleNewUser()
+    }
+
+    useEffect(() => {
         fetchMessages()
     }, [])
 

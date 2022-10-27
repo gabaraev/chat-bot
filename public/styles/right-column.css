@@ -3,7 +3,6 @@
     --ad-header-border: 3px solid rgba(0, 0, 0, 0);
     --ad-header-text-color: #6038F1;
     --ad-color: rgba(255, 255, 255, 0.45);
-    --ad-text-color: black;
     --social-border-color: #D3C9FB;
     --social-border: 2px;
     --ad-border-color: rgb(238, 234, 252);
@@ -14,27 +13,33 @@
     --ad-header-text-color: rgba(238, 234, 252, 0.87);
     --ad-header-border: 3px solid #8766FF;
     --ad-color: rgba(255, 255, 255, 0.10);
-    --ad-text-color: #EEEAFC;
     --social-border-color: rgba(135, 102, 255, 0.3);
     --ad-border-color: #8766FF;
 }
 
+a, a:active, a:visited{
+    text-decoration: none;
+    color: var(--ad-header-text-color);
+    line-height: 25px;
+}
+
 .right-column {
-    /* margin-right: 2vw; */
+    
     margin-top: 20px;
     margin-left: 1vw;
-    width: 13vw;
+    width: 13.75vw;
 }
 
 .ad-list-wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .ad-list-header {
-    height: 46px;
+    width: 13.45vw;
+    height: 3.5vh;
+    margin-bottom: 15px;
     background: var(--ad-header-color, rgba(255, 255, 255, 0.45));
     border: var(--ad-header-border, none);
     border-radius: 10px;
@@ -42,14 +47,16 @@
 }
 
 .ad-list-header>span {
+    line-height: 3.5vh;
     color: var(--ad-header-text-color, #6038F1);
-    line-height: 46px;
-    font-size: 24px;
+    font-size: 1vw;
 }
 
 .ad {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    width: 13vw;
+    height: fit-content;
+    margin: 15px 0;
+    padding: 5px;
     background: var(--ad-color, rgba(255, 255, 255, 0.45));
     border: 3px solid rgba(0, 0, 0, 0);
     border-radius: 17px;
@@ -60,26 +67,33 @@
     border-color: var(--ad-border-color, rgba(0, 0, 0, 0));
 }
 
-.ad p {
-    line-height: 30px;
-    color: var(--ad-text-color, black);
-}
-
 .social-wrapper {
+    padding: 0 5px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     height: 50px;
     border: var(--social-border, 1px) solid var(--social-border-color, #D3C9FB);
     border-radius: 17px;
-    margin-top: 36px;
+    margin-top: 15px;
 }
 
-.social-wrapper a {
-    padding-top: 10px;
-}
 
 .smol-youtube {
-    margin-top: -7px;
+    /* margin-top: -0.4vh; */
+    width: 1.9vw;
+}
+
+.zen-logo {
+    width: 1.3vw;
+}
+
+.telegram-logo {
+    width: 1.3vw;
+}
+
+.vk-logo {
+    width: 1.3vw;
 }
 
 .logos {
@@ -90,16 +104,10 @@
 
 .reflex-logo {
     border-radius: 10px;
-    width: 120px;
-    height: 120px;
+    width: 6vw;
 }
 
 .yfu-logo {
-    width: 120px;
-    height: 120px;
+    width: 6vw;
 }
 
-.zen-logo {
-    width: 30px;
-    height: 30px;
-}

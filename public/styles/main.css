@@ -54,6 +54,15 @@ table {
 	--body-color: #291E53;
 }
 
+p {
+	font-size: 0.8vw;
+}
+
+a {
+	font-size: 0.4vw;
+	overflow-wrap: break-word;
+}
+
 .app {
 	background: var(--body-color, #7452F1);
 	font-family: 'Montserrat', sans-serif;

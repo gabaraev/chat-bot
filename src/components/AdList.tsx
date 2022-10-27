@@ -1,4 +1,6 @@
 import Ad from './Ad'
+import VKMain from './ads/VkMainPost'
+import VKSic from './ads/VkSicPost'
 
 
 export default function AdList() {
@@ -7,8 +9,8 @@ export default function AdList() {
             <div className="ad-list-header" >
                 <span>Доска объявлений</span>
             </div>
-            <Ad />
-            <Ad />
+            <VKMain />
+            <VKSic />
             <Ad />
             <Ad />
         </div>

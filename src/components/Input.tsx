@@ -40,7 +40,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post(`http://localhost:8000`, newMessage)
+            axios.post(`https://arcane-virid.vercel.app/`, newMessage)
             .then(async res => {
                 const botMessage: mMessage = {
                     user: 'bot',
@@ -51,7 +51,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
                 setMessages([...previousMessagesForBotResponse, botMessage])
                 const docRef = doc(db, 'chats', `${Cookies.get('id')}`)
                 await updateDoc(docRef, {
-                messages: arrayUnion(botMessage)
+                messages: arrayUnion([newMessage, botMessage])
             })
             })
             .catch(err => console.error(err));
