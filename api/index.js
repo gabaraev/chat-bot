@@ -1,8 +1,8 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-import Main from './vkMain.js'
-import Sic from "./vkSic.js"
+import Main from './vk-main-post.js'
+import Sic from "./vk-sic-post.js"
 import { API } from 'vk-io'
 import token from '../token.js'
 
