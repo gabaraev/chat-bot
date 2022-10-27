@@ -4,7 +4,7 @@ import { PythonShell } from 'python-shell'
 // import vkMainPost from './api/vk-main-post'
 // import vkSicPost from "./api/vk-sic-post"
 import { API } from 'vk-io'
-import token from './token'
+import token from '../token.js'
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 

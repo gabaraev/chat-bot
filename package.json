@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.ts",
-    "start": "node index.ts",
+    "dev": "nodemon index.js",
+    "start": "node api/index.js",
     "deploy": "vercel deploy --prod"
   },
   "keywords": [],
@@ -28,11 +28,6 @@
     "firebase-admin": "^11.2.0",
     "firebase-tools": "^11.15.0",
     "pg": "^8.8.0",
-    "python-shell": "^3.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4",
-    "uuid": "^9.0.0",
-    "vercel": "^28.4.12",
     "vk-io": "^4.7.0"
   },
   "devDependencies": {
