@@ -7,14 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.ts",
-    "start": "node index.ts",
+    "start": "node ./api/index.ts",
     "deploy": "vercel deploy --prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.7",
     "@types/pg": "^8.6.5",
+    "@types/python-shell": "^1.0.3",
     "@vercel/python": "^3.1.22",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
@@ -22,19 +25,16 @@
     "firebase-admin": "^11.2.0",
     "firebase-tools": "^11.15.0",
     "pg": "^8.8.0",
+    "python-shell": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
     "uuid": "^9.0.0",
     "vercel": "^28.4.12",
     "vk-io": "^4.7.0"
   },
   "devDependencies": {
-    "@types/express": "^4.17.14",
-    "@types/node": "^18.11.6",
-    "@types/python-shell": "^1.0.3",
     "json": "^11.0.0",
     "nodemon": "^2.0.20",
-    "pandas": "^0.0.3",
-    "python-shell": "^3.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
+    "pandas": "^0.0.3"
   }
 }
