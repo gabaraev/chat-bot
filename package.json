@@ -10,8 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "./node_modules/.bit/netlify-lambda serve src",
-    "build": "./node_modules/.bit/netlify-lambda build src",
+    "start": "node index.js",
     "deploy": "vercel deploy --prod"
   },
   "keywords": [],
@@ -30,6 +29,7 @@
     "firebase-tools": "^11.15.0",
     "netlify-cli": "^12.0.11",
     "pg": "^8.8.0",
+    "python-shell": "^3.0.1",
     "serverless-http": "^3.1.0",
     "vk-io": "^4.7.0"
   },
