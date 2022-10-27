@@ -13,3 +13,5 @@ app.get('/', async (req, res) => {
     res.status(200).send(post)
     return
 })
+
+export default app

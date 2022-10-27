@@ -136,3 +136,5 @@ app.post('/', (req, res) => {
 		//   })
 	  // })
 })
+
+export default app
