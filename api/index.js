@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
 // 	}
 //   ]
 
-app.get('/api/vk-main-post', async (req, res) => {
+app.get('/vk-main-post', async (req, res) => {
 	// получаем объявление из вк
     const post = await APIvk.wall.get({owner_id: -47535294, count: 1})
     res.status(200).send(post)
@@ -77,7 +77,7 @@ app.get('/api/vk-main-post', async (req, res) => {
 	
 // })
 
-app.get('/api/vk-sic-post', async (req, res) => {
+app.get('/vk-sic-post', async (req, res) => {
 	const post = await APIvk.wall.get({owner_id: -76527561, count: 1})
     res.status(200).send(post)
     return
