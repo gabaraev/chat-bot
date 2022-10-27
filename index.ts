@@ -1,10 +1,10 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-// import vkMainPost from './vk-main-post'
-// import vkSicPost from "./vk-sic-post"
+// import vkMainPost from './api/vk-main-post'
+// import vkSicPost from "./api/vk-sic-post"
 import { API } from 'vk-io'
-import token from '../token'
+import token from './token'
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
 
@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
 // 	}
 //   ]
 
-app.get('/vk-main-post', async (req, res) => {
+app.get('/api/vk-main-post', async (req, res) => {
 	// получаем объявление из вк
     const post = await APIvk.wall.get({owner_id: -47535294, count: 1})
     res.status(200).send(post)
@@ -77,13 +77,13 @@ app.get('/vk-main-post', async (req, res) => {
 	
 // })
 
-app.get('/vk-sic-post', async (req, res) => {
+app.get('/api/vk-sic-post', async (req, res) => {
 	const post = await APIvk.wall.get({owner_id: -76527561, count: 1})
     res.status(200).send(post)
     return
 })
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
   //inserting incoming user message
 
   const options = {
@@ -126,4 +126,4 @@ app.post('/', (req, res) => {
 	  // })
 })
 
-app.listen(8000, () => console.log('server started'));
+app.listen(process.env.PORT || 8000, () => console.log('server started'));
