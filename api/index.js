@@ -1,8 +1,8 @@
 import express from "express"
 // import { Pool } from 'pg';
 import { PythonShell } from 'python-shell'
-// import vkMainPost from './api/vk-main-post'
-// import vkSicPost from "./api/vk-sic-post"
+import Main from './vkMain.js'
+import Sic from "./vkSic.js"
 import { API } from 'vk-io'
 import token from '../token.js'
 
@@ -11,8 +11,8 @@ import token from '../token.js'
 const app = express()
 
 const APIvk = new API({ token: token})
-// app.use('/', vkMainPost)
-// app.use('/', vkSicPost)
+app.use('/', Main)
+app.use('/', Sic)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(function (req, res, next) {
@@ -83,7 +83,7 @@ app.get('/vk-sic-post', async (req, res) => {
     return
 })
 
-app.post('/api', (req, res) => {
+app.post('/', (req, res) => {
   //inserting incoming user message
 
   const options = {
