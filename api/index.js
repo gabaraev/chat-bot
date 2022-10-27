@@ -137,4 +137,4 @@ app.post('/', (req, res) => {
 	  // })
 })
 
-export default app
+module.exports.handler(app)

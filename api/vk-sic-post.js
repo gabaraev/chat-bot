@@ -13,4 +13,4 @@ app.get('/', async (req, res) => {
     return
 })
 
-export default app
+module.exports.handler(app)
