@@ -5,7 +5,7 @@ import { PythonShell } from 'python-shell'
 // import Sic from "./vk-sic-post.js"
 // import { API } from 'vk-io'
 // import token from '../token.js'
-import ServerlessHttp from "serverless-http"
+// import ServerlessHttp from "serverless-http"
 // import { Router } from "express"
 
 // const vkPost = vk.wall.get({owner_id: -47535294, count: 1})
@@ -80,7 +80,7 @@ app.use(function (req, res, next) {
 	
 // })
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
 	res.json({
 		'hello': 'hi'
 	})
@@ -94,7 +94,7 @@ router.get('/', (req, res) => {
 //     return
 // })
 
-router.post('/', (req, res) => {
+app.post('/', (req, res) => {
   //inserting incoming user message
 
   const options = {
