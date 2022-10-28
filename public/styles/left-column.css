@@ -76,8 +76,8 @@
     }
     .character {
         position: absolute;
-        max-width: fit-content;
-        margin: 15vh 20vw;
+        max-width: 300px;
+        margin: 100px 80px;
         z-index: 0; 
     }
 }

@@ -150,9 +150,14 @@ textarea {
 }
 
 @media (max-device-width: 500px) {
+    .chat-content {
+        height: 800px;
+    }
+    .send {
+        width: 30px;
+    }
     .chat-window-wrapper {
         width: 100vw;
-        height: 100vh;
     }
     .message-input {
         font-size: 10pt

@@ -40,8 +40,9 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post(`https://reflex-server.onrender.com/`, newMessage)
+            axios.post(`http://127.0.0.1:5000/`, { content: newMessage.content })
             .then(async res => {
+                console.log(res)
                 const botMessage: mMessage = {
                     user: 'bot',
                     content: res.data.content
@@ -73,7 +74,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
                     placeholder="Начните писать сообщение..."
                     value={value}
                 />
-                <button className="message-button" onClick={sendMessage}><img src='icons/Sendstrelka.svg' alt="отправить сообщение"/></button>
+                <button className="message-button" onClick={sendMessage}><img src='icons/Sendstrelka.svg' className="send" alt="отправить сообщение"/></button>
             </div>
         </div>
     )

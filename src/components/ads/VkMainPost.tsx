@@ -20,7 +20,7 @@ export default function VKMain()  {
     Но самое главное, теперь ты часть большой семьи! Мы ждём, что здесь ты будешь вдохновляться и достигать, но останешься собой!`)
 
     getPost().then(res => {
-        const data = res.items[0]
+        const data = res[0]
         setLink(`https://vk.com/sfedu_official?w=wall-47535294_${data.id}`)
         setContent(data.text.slice(0, 150).replaceAll(/(id|club)[0-9]+\||[\[,\]]/g, '').trim() + '...')
     })

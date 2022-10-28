@@ -18,7 +18,7 @@ export default function VKAbit()  {
     const [content, setContent] = useState(``)
 
     getPost().then(res => {
-        const data = res.items[0]
+        const data = res[0]
         setLink(`https://vk.com/sfedu_official?w=wall-205247745_${data.id}`)
         setContent(data.text.slice(0, 150).replaceAll(/(id|club)[0-9]+\||[\[,\]]/g, '').trim() + '...')
     })

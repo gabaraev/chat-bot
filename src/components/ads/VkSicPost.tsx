@@ -4,7 +4,7 @@ import axios from "axios"
 
 const getPost = async () => {
     try {
-        const {data: response} = await axios.get('https://reflex-server.onrender.com/vk-sic-post')
+        const {data: response} = await axios.get('http://127.0.0.1:5000/vk-sic-post')
         return response
         
     } 
@@ -20,7 +20,7 @@ export default function VKSic()  {
     `)
 
     getPost().then(res => {
-        const data = res.items[0]
+        const data = res[0]
         setLink(`https://vk.com/sfedu_official?w=wall-76527561_${data.id}`)
         setContent(data.text.slice(0, 150).replaceAll(/(id|club)[0-9]+\||[\[,\]]/g, '').trim() + '...')
     })
