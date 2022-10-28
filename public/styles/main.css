@@ -54,14 +54,9 @@ table {
 	--body-color: #291E53;
 }
 
-p {
+/* p {
 	font-size: 0.8vw;
-}
-
-a {
-	font-size: 0.4vw;
-	overflow-wrap: break-word;
-}
+} */
 
 .app {
 	background: var(--body-color, #7452F1);
@@ -83,6 +78,7 @@ a {
     height: 700px;
     z-index: -1;
 } */
+
 
 
 

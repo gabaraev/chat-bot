@@ -1,4 +1,5 @@
-import Ad from './Ad'
+import VKAbit from './ads/VkabitPost'
+import VKCom from './ads/VkComPost'
 import VKMain from './ads/VkMainPost'
 import VKSic from './ads/VkSicPost'
 
@@ -11,8 +12,8 @@ export default function AdList() {
             </div>
             <VKMain />
             <VKSic />
-            <Ad />
-            <Ad />
+            <VKAbit />
+            <VKCom />
         </div>
     )
 }

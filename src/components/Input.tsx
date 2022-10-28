@@ -40,7 +40,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post(`https://arcane-virid.vercel.app/`, newMessage)
+            axios.post(`https://reflex-server.onrender.com/`, newMessage)
             .then(async res => {
                 const botMessage: mMessage = {
                     user: 'bot',

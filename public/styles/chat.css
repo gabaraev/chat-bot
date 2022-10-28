@@ -80,7 +80,7 @@
     z-index: 2;
     border-radius: 10px;
     text-align: left;
-    font-size: 14pt;
+    font-size: 0.8vw;
 }
 
 .message-from-user {
@@ -126,7 +126,7 @@
     width: 100%;
     margin-top: 5px;
     margin-left: 1vw;
-    font-size: 14pt;
+    font-size: 0.8vw;
     border: 0;
     outline: none;
     resize: none
@@ -147,4 +147,31 @@ textarea {
     cursor: pointer;
     border: none;
     background-color: var(--message-button-color, #EEEAFC);
+}
+
+@media (max-device-width: 500px) {
+    .chat-window-wrapper {
+        width: 100vw;
+        height: 100vh;
+    }
+    .message-input {
+        font-size: 10pt
+
+    }
+
+    .message-input-wrapper {
+        max-width: 70vw;
+    }
+
+    .message {
+        font-size: 10pt;
+        max-width: 70vw;
+        
+    }
+    .message-box {
+        z-index: 1;
+    }
+    .message-input-wrapper {
+        height: 5vh;
+    }
 }

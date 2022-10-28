@@ -23,10 +23,10 @@
 }
 
 .heading {
-    font-size: 30pt;
+    font-size: 1.5vw;
     max-width: 200px;
     margin-top: 20px;
-    font-size: 24pt;
+    /* font-size: 24pt; */
     color: var(--heading-color, #EEEAFC);
 }
 
@@ -45,8 +45,16 @@
     margin-right: 8px;
 }
 
+.theme>img {
+    height: 3vh;
+}
+
 .glasses {
     margin-left: 8px;
+}
+
+.glasses>img {
+    height: 3vh;
 }
 
 .hover:hover {
@@ -60,4 +68,16 @@
     margin-left: -8px;
     height: 70vh;
     max-width: 20vw;
+}
+
+@media (max-device-width: 500px) {
+    .large {
+        display: none
+    }
+    .character {
+        position: absolute;
+        max-width: fit-content;
+        margin: 15vh 20vw;
+        z-index: 0; 
+    }
 }

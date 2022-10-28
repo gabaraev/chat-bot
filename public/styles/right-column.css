@@ -19,7 +19,7 @@
 
 a, a:active, a:visited{
     text-decoration: none;
-    color: var(--ad-header-text-color);
+    color: rgba(238, 234, 252, 0.87);
     line-height: 25px;
 }
 
@@ -63,8 +63,9 @@ a, a:active, a:visited{
     text-align: center;
 }
 
-.ad:hover {
-    border-color: var(--ad-border-color, rgba(0, 0, 0, 0));
+a {
+	font-size: 0.4vw;
+	overflow-wrap: break-word;
 }
 
 .social-wrapper {
@@ -110,4 +111,3 @@ a, a:active, a:visited{
 .yfu-logo {
     width: 6vw;
 }
-
