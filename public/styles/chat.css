@@ -103,6 +103,10 @@
     word-break: break-word;
 }
 
+.bot-message-content>span>a {
+    color: var(--message-bot-content)
+}
+
 .input-outline {
     padding-top: 1vh;
     border-top: solid 1px var(--end-line, #7452F1);

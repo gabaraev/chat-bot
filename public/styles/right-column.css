@@ -5,7 +5,7 @@
     --ad-color: rgba(255, 255, 255, 0.45);
     --social-border-color: #D3C9FB;
     --social-border: 2px;
-    --ad-border-color: rgb(238, 234, 252);
+    --ad-border: 3px solid rgb(238, 234, 252);
 }
 
 .right-column[data-theme='dark'] {
@@ -14,7 +14,7 @@
     --ad-header-border: 3px solid #8766FF;
     --ad-color: rgba(255, 255, 255, 0.10);
     --social-border-color: rgba(135, 102, 255, 0.3);
-    --ad-border-color: #8766FF;
+    --ad-border: 3px solid #8766FF;
 }
 
 a, a:active, a:visited{
@@ -53,6 +53,8 @@ a, a:active, a:visited{
 }
 
 .ad {
+    font-size: 0.8vw;
+    overflow-wrap: break-word;
     width: 13vw;
     height: fit-content;
     margin: 15px 0;
@@ -63,10 +65,14 @@ a, a:active, a:visited{
     text-align: center;
 }
 
-a {
-	font-size: 0.4vw;
-	overflow-wrap: break-word;
+.ad:hover {
+    border: var(--ad-border)
 }
+
+/* a {
+	font-size: 0.8vw;
+	overflow-wrap: break-word;
+} */
 
 .social-wrapper {
     padding: 0 5px;

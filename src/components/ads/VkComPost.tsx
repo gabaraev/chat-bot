@@ -4,7 +4,7 @@ import axios from "axios"
 
 const getPost = async () => {
     try {
-        const {data: response} = await axios.get('https://reflex-server.onrender.com/vk-abit-post')
+        const {data: response} = await axios.get('https://reflex-server.onrender.com/vk-com-post')
         return response
         
     } 
@@ -20,7 +20,7 @@ export default function VKCom()  {
     getPost().then(res => {
         const data = res[0]
         setLink(`https://vk.com/abiturientsfedu?w=wall485005212_${data.id}`)
-        setContent(data.text.slice(0, 150).replaceAll(/(id|club)[0-9]+\||[\[,\]]/g, '').trim() + '...')
+        setContent(data.text.slice(0, 60).replaceAll(/(id|club)[0-9]+\||[\[,\]]/g, '').trim() + '...')
     })
     return(
         <a href={link} target='_blank'><div className="ad"><p>{content}</p></div></a>
