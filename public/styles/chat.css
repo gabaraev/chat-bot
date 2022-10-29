@@ -108,6 +108,7 @@
 }
 
 .input-outline {
+    z-index: 3;
     padding-top: 1vh;
     border-top: solid 1px var(--end-line, #7452F1);
 }
