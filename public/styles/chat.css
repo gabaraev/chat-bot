@@ -153,10 +153,19 @@ textarea {
     background-color: var(--message-button-color, #EEEAFC);
 }
 
+.m-character {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 433px;
+    transform: translate(-50%, -50%);
+    height: 500px;
+}
 @media (max-device-width: 500px) {
-    .chat-content {
-        height: 800px;
+    .chat-window-wrapper {
+        margin: 0;
+        height: 100%;
     }
+    
     .send {
         width: 30px;
     }

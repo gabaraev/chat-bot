@@ -16,10 +16,12 @@ const db = getFirestore(firebaseApp)
 
 interface chatWindowProps {
     setCharacter: React.Dispatch<React.SetStateAction<string>>,
-    theme: string
+    theme: string,
+    character: string,
+    setMCharacter: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function ChatWindow ({ setCharacter, theme }: chatWindowProps) {
+export default function ChatWindow ({ setCharacter, theme, character, setMCharacter }: chatWindowProps) {
 
     const [messages, setMessages] = useState([] as mMessage[])
 
@@ -60,17 +62,37 @@ export default function ChatWindow ({ setCharacter, theme }: chatWindowProps) {
     }, [messages])
 
     return (
-        <div className='chat-window-wrapper' data-theme={theme} >
+        <>
+        {window.screen.width <= 500 ?
+            <div className='chat-window-wrapper' data-theme={theme} >
             <div className='top-overflow'/>
             <div className='chat-content'>
+            <img className='m-character' src={`${character}-light.svg`} alt="I'm supposed to be here :("></img>
                 <div className="messages">
                     {
                         messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
                     }
                 </div>
                 <div ref={endMessages} ></div>
+                </div>
+                <Input setMessages={setMessages} messages={messages} setCharacter={setMCharacter}/>
             </div>
-            <Input setMessages={setMessages} messages={messages} setCharacter={setCharacter}/>
-        </div>
+        :
+            <div className='chat-window-wrapper' data-theme={theme} >
+            <div className='top-overflow'/>
+            <div className='chat-content'>
+
+                <div className="messages">
+                    {
+                        messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
+                    }
+                </div>
+                <div ref={endMessages} ></div>
+                </div>
+                <Input setMessages={setMessages} messages={messages} setCharacter={setCharacter}/>
+            </div>
+        }
+            
+        </>
     )
 }

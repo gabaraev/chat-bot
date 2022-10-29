@@ -58,14 +58,26 @@ table {
 	font-size: 0.8vw;
 } */
 
+body {
+	background-color: var(--body-color, #7452F1);
+	position: relative;
+}
+
 .app {
-	background: var(--body-color, #7452F1);
+	
 	font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
 	/* align-items: stretch; */
     justify-content: center;
 	
+}
+
+@media (max-device-width: 500px) {
+	.app {
+		height: fit-content;
+		max-height: 800px;
+	}
 }
 /* .ellipse {
     position: absolute;

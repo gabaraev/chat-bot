@@ -17,7 +17,7 @@ export default function LeftColumn({ character, theme, setTheme }: LeftColumnPro
 
 	return (
 		<div className="left-column" data-theme={theme}>
-			<h1 className='heading large' >Помошник абитуриента ЮФУ</h1>
+			<h1 className='heading large' >Помощник абитуриента ЮФУ</h1>
 			<div className='left-column-buttons large'>
 				<div className='theme hover' onClick={handleTheme}>  
 					<img src={`icons/${theme}-theme.svg`} alt='смена темы'></img>

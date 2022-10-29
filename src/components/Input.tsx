@@ -47,7 +47,10 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
                     user: 'bot',
                     content: res.data.content
                 }
-                setCharacter(`icons/characters/${res.data.type}`)
+                if (window.screen.width <= 500)
+                    setCharacter(`icons/characters/m-${res.data.type}`)
+                else
+                    setCharacter(`icons/characters/${res.data.type}`)
                 
                 setMessages([...previousMessagesForBotResponse, botMessage])
                 const docRef = doc(db, 'chats', `${Cookies.get('id')}`)
