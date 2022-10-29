@@ -25,6 +25,7 @@
 }
 
 .chat-window-wrapper {
+    position: relative;
     width: 32vw; 
     max-height: 90vh;
     margin-top: 20px;
@@ -42,6 +43,7 @@
 }
 
 .chat-content {
+    position: relative;
     height: 90vh;
     overflow-y: auto;
 }
@@ -108,7 +110,7 @@
 }
 
 .input-outline {
-    z-index: 3;
+    z-index: 1000;
     padding-top: 1vh;
     border-top: solid 1px var(--end-line, #7452F1);
 }
@@ -155,7 +157,7 @@ textarea {
 }
 
 .m-character {
-    position: absolute;
+    position: fixed;
     margin-left: 50%;
     margin-top: 433px;
     transform: translate(-50%, -50%);
@@ -171,6 +173,7 @@ textarea {
         width: 30px;
     }
     .chat-window-wrapper {
+        position: relative;
         width: 100vw;
     }
     .message-input {

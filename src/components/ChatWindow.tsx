@@ -65,17 +65,17 @@ export default function ChatWindow ({ setCharacter, theme, character, setMCharac
         <>
         {window.screen.width <= 500 ?
             <div className='chat-window-wrapper' data-theme={theme} >
-            <div className='top-overflow'/>
-            <div className='chat-content'>
-            <img className='m-character' src={`${character}-light.svg`} alt="I'm supposed to be here :("></img>
-                <div className="messages">
-                    {
-                        messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
-                    }
-                </div>
-                <div ref={endMessages} ></div>
-                </div>
-                <Input setMessages={setMessages} messages={messages} setCharacter={setMCharacter}/>
+                <div className='top-overflow'/>
+                <div className='chat-content'>
+                    <img className='m-character' src={`${character}-light.svg`} alt="I'm supposed to be here :("></img>
+                    <div className="messages">
+                        {
+                            messages.map(message => <div className={'message-box ' + message.user + '-message-wrapper'}><Message message={message}/></div>)
+                        }
+                    </div>
+                    <div ref={endMessages} ></div>
+                    </div>
+                    <Input setMessages={setMessages} messages={messages} setCharacter={setMCharacter}/>
             </div>
         :
             <div className='chat-window-wrapper' data-theme={theme} >

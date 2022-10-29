@@ -59,6 +59,10 @@ table {
 } */
 
 body {
+	background: var(--body-color)
+}
+
+.app {
 	background-color: var(--body-color, #7452F1);
 	position: relative;
 }

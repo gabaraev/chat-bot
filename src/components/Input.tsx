@@ -40,7 +40,7 @@ export default function Input({ messages, setMessages, setCharacter }: InputProp
             await setMessages(previousMessagesForBotResponse)
             setValue('');
 
-            axios.post(`https://reflex-server.onrender.com/`, { content: newMessage.content })
+            axios.post(`http://127.0.0.1:5000/`, { content: newMessage.content })
             .then(async res => {
                 console.log(res)
                 const botMessage: mMessage = {

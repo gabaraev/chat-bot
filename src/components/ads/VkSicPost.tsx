@@ -4,7 +4,7 @@ import axios from "axios"
 
 const getPost = async () => {
     try {
-        const {data: response} = await axios.get('https://reflex-server.onrender.com/vk-sic-post')
+        const {data: response} = await axios.get('http://127.0.0.1:5000/vk-sic-post')
         return response
         
     } 
